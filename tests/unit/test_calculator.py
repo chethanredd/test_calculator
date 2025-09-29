@@ -47,3 +47,33 @@ class TestMultiplyDivideWithValidation:
 
 
 # TODO: Students will add TestMultiplyDivide class
+class TestMultiplyDivide:
+    """Test multiplication and division operations"""
+
+    def test_multiply_positive_numbers(self):
+        """Test multiplying positive numbers"""
+        assert multiply(2, 3) == 6
+        assert multiply(10, 5) == 50
+
+    def test_multiply_with_negative_numbers(self):
+        """Test multiplying with negatives"""
+        assert multiply(-2, 3) == -6
+        assert multiply(4, -5) == -20
+        assert multiply(-3, -7) == 21
+
+    def test_divide_positive_numbers(self):
+        """Test dividing positive numbers"""
+        assert divide(6, 3) == 2
+        assert divide(20, 5) == 4
+
+    def test_divide_with_negative_numbers(self):
+        """Test dividing with negatives"""
+        assert divide(-6, 3) == -2
+        assert divide(9, -3) == -3
+        assert divide(-15, -5) == 3
+
+    def test_divide_by_zero(self):
+        """Test division by zero raises error"""
+        with pytest.raises(ValueError, match="division by zero"):
+            divide(10, 0)
+
