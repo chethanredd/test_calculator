@@ -76,4 +76,3 @@ class TestMultiplyDivide:
         """Test division by zero raises error"""
         with pytest.raises(ValueError, match="division by zero"):
             divide(10, 0)
-
